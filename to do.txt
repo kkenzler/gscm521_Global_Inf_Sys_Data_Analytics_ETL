@@ -1,0 +1,4 @@
+let's get this organized as a py file or package
+let's add outlier analysis
+let's get a readme io/use doc
+let's add the growth/to do projects in the devops prompt doc
