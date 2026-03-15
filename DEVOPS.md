@@ -1,9 +1,4 @@
-# Generic Clean → Merge → Analyze Pipeline Guide
-
-A reference for using `gen_clean.ipynb`, `gen_merge.ipynb`, and `gen_analysis.ipynb`
-on a new dataset without needing LLM assistance for standard runs.
-
----
+# ETL Pipeline — System Context
 
 ## Pipeline Overview
 
@@ -176,7 +171,7 @@ All downstream cells reference these constants. If the merged schema changes, up
 Rename merge-produced columns to `derived_` prefix. Add computed fields with the same prefix.
 Rename join key columns to `joinKeyCol_` prefix.
 
-Document column conventions in your project MD file so future sessions don't need to reverse-engineer them.
+Document column conventions in this file so future sessions don't need to reverse-engineer them.
 
 ### Analysis sections
 
@@ -189,24 +184,18 @@ Each section should have a clear stakeholder question it answers. Before writing
 
 ---
 
-## Project MD file conventions
+## Column Naming Conventions
 
-Each project should have its own MD file (e.g. `PROMPT_DevOps_<projectname>.md`) covering:
+These apply across all ETL projects using this pipeline:
 
-```
-In scope / Out of scope
-Stakeholder needs
-Intended questions to answer
-Specific linking/cleaning notes (dataset-specific join keys, known data quality issues)
-Column conventions (derived_ / joinKeyCol_ renames specific to this project)
-Key findings (filled in after analysis)
-```
+- `derived_*` — columns computed during cleaning or analysis (not raw input)
+- `joinKeyCol_*` — columns used as merge keys (renamed for clarity)
 
-The MD file is also useful context for an LLM if you return to a project after time away.
+Document project-specific column decisions in this file under a "Project Notes" section below.
 
 ---
 
-## Common issues and what to look for
+## Common Issues
 
 | Symptom | Likely cause | Where to look |
 |---|---|---|
@@ -216,3 +205,15 @@ The MD file is also useful context for an LLM if you return to a project after t
 | Unexpected column name collisions after join | Tables share non-key column names | `prefix` rename strategy handles this; check `projected_new_col_examples` in plan |
 | Clean CSVs look wrong after export | Manual cleaning cell ran before allowlists | Check execution order; allowlists cell must run before manual cleaning cell |
 | Analysis column not found | Schema changed after clean or merge | Update column resolution cell in gen_analysis |
+
+---
+
+## Project Notes
+
+<!-- Document project-specific decisions here as you work through each dataset.
+     Example sections:
+     ### [Project Name] — [Date]
+     - Join key: customer_id (renamed from cust_id in raw_orders.csv)
+     - Dedup rule: keep first on (customer_id, date) — duplicates are re-transmissions
+     - Derived columns: derived_days_since_first_order, derived_ltv_bucket
+-->
