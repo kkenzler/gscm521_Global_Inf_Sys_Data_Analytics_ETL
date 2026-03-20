@@ -210,6 +210,9 @@ Document project-specific column decisions in this file under a "Project Notes" 
 
 ## Project Notes
 
+- `prompt-assist`: Any notebook logic change should start by recording the dataset-specific join keys, dedup rules, and derived-column conventions here before editing notebooks.
+- `to-do`: When ETL work resumes, create the first concrete project note entry instead of keeping this file purely generic.
+
 <!-- Document project-specific decisions here as you work through each dataset.
      Example sections:
      ### [Project Name] — [Date]
