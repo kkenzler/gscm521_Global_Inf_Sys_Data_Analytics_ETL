@@ -1,4 +1,13 @@
-# ETL Pipeline — System Context
+# GSCM 521 - Global Information Systems Data Analytics ETL
+
+Course-facing ETL notebook pipeline for auditable clean -> merge -> analysis work.
+
+Source folder:
+- C:\Users\kadek\source\repos\gscm521_Global_Inf_Sys_Data_Analytics_ETL
+
+---
+
+# ETL Pipeline - System Context
 
 ## Pipeline Overview
 

@@ -1,9 +1,11 @@
-ETL Pipeline
-============
+GSCM 521 - Global Information Systems Data Analytics ETL
+========================================================
 Generic three-stage data cleaning, merging, and analysis pipeline implemented
 as Jupyter notebooks. Each stage produces auditable Excel workbooks with
 human-reviewable records of every decision made. Designed for datasets that
 need traceable, documented transformation before analysis.
+
+This repo is the course-facing ETL lane for GSCM 521.
 
 
 HOW TO START
@@ -15,7 +17,7 @@ in order. Run the three notebooks sequentially:
   2. gen_merge.ipynb    -- join reconnaissance, merge plan, left-joins
   3. gen_analysis.ipynb -- statistical analysis (customize for your dataset)
 
-Place raw input files (CSV or simple XLSX sheets) in the _raw_data/ folder
+Place raw input files (CSV or simple XLSX sheets) in the `_raw_data/` folder
 before starting.
 
 
