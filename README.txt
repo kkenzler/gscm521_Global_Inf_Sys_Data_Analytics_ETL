@@ -94,3 +94,8 @@ no_candidate in merge plan         No name-similar column pair found. Lower
 
 Analysis column not found          Schema changed after clean/merge. Update
                                    the column resolution cell in gen_analysis.
+
+## Technical Context
+
+Detailed operating notes, agent handoffs, and review context live under `_orchestration\`. Start with `_orchestration\DEVOPS.md` when present.
+
