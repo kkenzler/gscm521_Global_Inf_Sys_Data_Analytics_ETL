@@ -3,7 +3,7 @@
 Course-facing ETL notebook pipeline for auditable clean -> merge -> analysis work.
 
 Source folder:
-- C:\Users\kadek\source\repos\gscm521_Global_Inf_Sys_Data_Analytics_ETL
+- C:\Users\kadek\source\repos\schoolPortfolio\gscm521_Global_Inf_Sys_Data_Analytics_ETL
 
 ---
 
