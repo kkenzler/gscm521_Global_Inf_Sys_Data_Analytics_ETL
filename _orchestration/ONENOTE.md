@@ -2,7 +2,7 @@
 onenote_page: repo_gscm521
 repo_path: C:\Users\kadek\source\repos\schoolPortfolio\gscm521_Global_Inf_Sys_Data_Analytics_ETL
 last_updated: 2026-07-12
-last_synced: 2026-08-07T07:07:57
+last_synced: 2026-08-08T04:18:29
 ---
 
 # repo_gscm521
